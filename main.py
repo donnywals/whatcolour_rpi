@@ -28,8 +28,8 @@ try:
         minutes = float(time.strftime("%M", current_time))
         seconds = float(time.strftime("%S", current_time))
 
-        r_val = hours
-        g_val = minutes
+        r_val = hours/24*100
+        g_val = minutes/60*100
         b_val = seconds
 
         r.ChangeDutyCycle(r_val)
